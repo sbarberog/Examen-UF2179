@@ -73,7 +73,7 @@ public class CalculadoraEnvios extends JFrame {
 		contentPane.setLayout(new MigLayout("", "[41.00][][45.00][38.00][grow]", "[][][grow][][grow][][][13.00][]"));
 
 		JPanel panel = new JPanel();
-		panel.setBackground(Color.GRAY);
+		panel.setBackground(Color.MAGENTA);
 		contentPane.add(panel, "cell 0 0 5 1,grow");
 
 		JLabel lblNewLabel = new JLabel("Calculadora de envíos");
@@ -128,15 +128,15 @@ public class CalculadoraEnvios extends JFrame {
 		spinner.setModel(new SpinnerNumberModel(1, 1, 40, 1));
 		contentPane.add(spinner, "cell 2 6,growx");
 
-		JLabel lblNewLabel_5 = new JLabel("Kg");
-		contentPane.add(lblNewLabel_5, "cell 4 6");
-
 		JButton btnCalcular = new JButton("Calcular Precio");
 		btnCalcular.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calculaPrecio();
 			}
 		});
+		
+				JLabel lblNewLabel_5 = new JLabel("Kg");
+				contentPane.add(lblNewLabel_5, "cell 3 6");
 		contentPane.add(btnCalcular, "cell 0 8 5 1,alignx center");
 	}
 
